@@ -6,11 +6,15 @@
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/23 03:13:47 by faksouss          #+#    #+#              #
-#    Updated: 2023/09/23 03:17:08 by faksouss         ###   ########.fr        #
+#    Updated: 2023/09/27 04:36:13 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp\
+	Animal.cpp\
+	Dog.cpp Cat.cpp\
+	WrongAnimal.cpp\
+	WrongCat.cpp
 
 OBJ_DIR = obj
 
@@ -18,7 +22,11 @@ SRC_DIR = src
 
 OBJ = $(addprefix $(OBJ_DIR)/,$(SRC:.cpp=.o))
 
-HDR = inc/Animal.hpp inc/Dog.hpp inc/Cat.hpp
+HDR = inc/Animal.hpp\
+	inc/Dog.hpp\
+	inc/Cat.hpp\
+	inc/WrongAnimal.hpp\
+	inc/WrongCat.hpp
 
 INC = -I inc
 
