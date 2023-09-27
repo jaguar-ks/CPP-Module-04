@@ -1,5 +1,5 @@
 # *CPP-Module-04*
-
+---
 ## **Navigation table:**
 1. [Polymorphism in C++.](#polymorphism-in-c)
 1. [Types of Polymorphism in C++.](#types-of-polymorphism-in-c)
@@ -10,12 +10,14 @@
 1. [Compile-Time Polymorphism Vs. Run-Time Polymorphism](#compile-time-polymorphism-vs-run-time-polymorphism)
 1. [Abstract classes](#abstract-classes)
 
+---
 ## **Polymorphism in C++:**
 Polymorphism word is the combination of "poly," which means many + "morphs," which means forms, which together means many forms. Polymorphism in C++ is when the behavior of the same object or function is different in different contexts. Let's take a real-world example of the word right can mean different things in a different context.
 
 + I was right. In the above sentence, the word right means "correct".
 + Please take a right turn. The word right refers to the "right direction" in the above sentence.
 
+---
 ## **Types of Polymorphism in C++:**
 There is two types of Polymorphism:
 
@@ -96,3 +98,5 @@ An abstract class is a class that is designed to be specifically used as a base 
 ```
 
 > Note: The return type of the virtual function must be consistent throughout all of its implementing classes.
+
+---
