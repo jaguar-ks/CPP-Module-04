@@ -63,6 +63,8 @@ The syntax of virtual functions is as follows:
 ```
 >Virtual functions in C++ must be members of some class, also they cannot be static members of the class. Hence, virtual functions belong to the objects of the class, not the class itself, and once they are defined as virtual in the base class no need to be marked as virtual in derived classes, in addition to that functions prototype of a designated as a virtual function must be similar in the base class and all the derived classes.
 
+> Note : Deleting a derived class object using a pointer of base class type that has a non-virtual destructor results in undefined behavior. To correct this situation, the base class should be defined with a virtual destructor. Making base class destructor virtual guarantees that the object of derived class is destructed properly.
+
 ---
 ## **VTABLE & VPTR:**
 To accomplish late binding, the compiler creates a single table (called the VTABLE) for each class that contains virtual functions. The compiler places the addresses of the virtual functions for that particular class in the VTABLE. In each class with virtual functions, it secretly places a pointer, called the vpointer (abbreviated as VPTR), which points to the VTABLE for that object. When you make a virtual function call through a base-class pointer (that is, when you make a polymorphic call), the compiler quietly inserts code to fetch the VPTR and look up the function address in the VTABLE, thus calling the right function and causing late binding to take place, this happen in two actions:
