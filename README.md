@@ -7,6 +7,8 @@
     1. [Runtime Polymorphism.](#runtime-polymorphism)
 1. [Virtual Functions.](#virtual-functions)
 1. [VTABLE & VPTR.](#vtable--vptr)
+1. [Compile-Time Polymorphism Vs. Run-Time Polymorphism](#compile-time-polymorphism-vs-run-time-polymorphism)
+1. [Abstract classes](#abstract-classes)
 
 ## **Polymorphism in C++:**
 Polymorphism word is the combination of "poly," which means many + "morphs," which means forms, which together means many forms. Polymorphism in C++ is when the behavior of the same object or function is different in different contexts. Let's take a real-world example of the word right can mean different things in a different context.
@@ -61,6 +63,7 @@ The syntax of virtual functions is as follows:
 ```
 >Virtual functions in C++ must be members of some class, also they cannot be static members of the class. Hence, virtual functions belong to the objects of the class, not the class itself, and once they are defined as virtual in the base class no need to be marked as virtual in derived classes, in addition to that functions prototype of a designated as a virtual function must be similar in the base class and all the derived classes.
 
+---
 ## **VTABLE & VPTR:**
 To accomplish late binding, the compiler creates a single table (called the VTABLE) for each class that contains virtual functions. The compiler places the addresses of the virtual functions for that particular class in the VTABLE. In each class with virtual functions, it secretly places a pointer, called the vpointer (abbreviated as VPTR), which points to the VTABLE for that object. When you make a virtual function call through a base-class pointer (that is, when you make a polymorphic call), the compiler quietly inserts code to fetch the VPTR and look up the function address in the VTABLE, thus calling the right function and causing late binding to take place, this happen in two actions:
 
@@ -69,3 +72,25 @@ To accomplish late binding, the compiler creates a single table (called the VTAB
 + At the class level, there exists a static data member, namely VTABLE., it belongs to the class, & not its objects is modeled as a static array consisting of function pointers, each array bucket (cell) of VTABLE consisting of a function pointer, points to some virtual function in the class.
 
 ![vtables and vptrs](https://www.equestionanswers.com/cpp/images/vptr-vtable-vfunctions.gif)
+
+---
+
+## **Compile-Time Polymorphism Vs. Run-Time Polymorphism:**
+
+| Compile Time | Run Time |
+|--------------|----------|
+| At Compile time, which functions to be called is decided. | At Runtime, which function to be called is decided. |
+| Also known as early or static binding | Also known as late or dynamic binding |
+| It executes faster because the function is resolved at compilation time only. | It executes slower because the function is resolved at Run-time. |
+| It is achieved through function and operator overloading | t is achieved through function overriding and virtual functions |
+
+---
+
+## **Abstract classes:**
+An abstract class is a class that is designed to be specifically used as a base class. An abstract class contains at least one pure virtual function. You declare a pure virtual function by using a pure specifier (= 0) in the declaration of a virtual member function in the class declaration. The classes inheriting the abstract class must provide a definition for the pure virtual function; otherwise, the subclass would become an abstract class itself.
+
+```cpp
+    virtual <FuncReturnType> <FuncName> (<Parametes>) = 0; 
+```
+
+> Note: The return type of the virtual function must be consistent throughout all of its implementing classes.
