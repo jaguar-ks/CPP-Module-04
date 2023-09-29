@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 03:10:48 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/23 05:35:06 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/29 06:31:55 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Dog::Dog( Dog const &obj ){
 
 Dog &Dog::operator=( Dog const &obj ){
     if (this != &obj){
+        delete this->brain;
         this->Type = obj.getType();
         this->brain = obj.getBrain();
     }

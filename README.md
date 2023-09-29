@@ -9,6 +9,9 @@
 1. [VTABLE & VPTR.](#vtable--vptr)
 1. [Compile-Time Polymorphism Vs. Run-Time Polymorphism](#compile-time-polymorphism-vs-run-time-polymorphism)
 1. [Abstract classes](#abstract-classes)
+1. [Interfaces in C++.](#interfaces-in-c)
+    1. [Importance of Interfaces.](#importance-of-interfaces)
+    1. [Rules While Using Interfaces](#rules-while-using-interfaces)
 
 ---
 ## **Polymorphism in C++:**
@@ -100,3 +103,10 @@ An abstract class is a class that is designed to be specifically used as a base 
 > Note: The return type of the virtual function must be consistent throughout all of its implementing classes.
 
 ---
+
+## **Interfaces in C++:**
+Interfaces are nothing but a way to describe the behavior of a class without committing to the implementation of the class. In C++ programming there is no built-in concept of interfaces. In order to create an interface, we need to create an abstract class which is having only pure virtual methods. In C++, Interfaces are also called pure abstract classes.
+
+### ***Importance of Interfaces:***
++ Any class derived from the pure abstract class (Interface) must implement all of the methods of the base class i.e. Interface.
++ Interface pointers can be passed to functions and classes thereby we can call the functions of the derived class from there itself.

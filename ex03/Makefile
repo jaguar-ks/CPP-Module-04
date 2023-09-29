@@ -6,11 +6,16 @@
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/24 07:47:39 by faksouss          #+#    #+#              #
-#    Updated: 2023/09/24 07:56:32 by faksouss         ###   ########.fr        #
+#    Updated: 2023/09/29 06:25:47 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp 
+SRC = main.cpp\
+		AMateria.cpp\
+		Character.cpp\
+		Cure.cpp\
+		Ice.cpp\
+		MateriaSource.cpp\
 
 SRC_DIR = src
 
@@ -18,13 +23,19 @@ OBJ_DIR = obj
 
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
-HDR = 
+HDR = inc/AMateria.hpp\
+		inc/Character.hpp\
+		inc/Cure.hpp\
+		inc/Ice.hpp\
+		inc/ICharacter.hpp\
+		inc/IMateriaSource.hpp\
+		inc/MateriaSource.hpp
 
 INC = -I inc
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = 
+NAME = Matreia
 
 all : $(NAME)
 

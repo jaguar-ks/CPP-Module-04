@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/23 05:20:33 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/28 01:34:51 by faksouss         ###   ########.fr       */
+/*   Created: 2023/09/29 05:55:30 by faksouss          #+#    #+#             */
+/*   Updated: 2023/09/29 05:56:28 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
 #include <string>
+#include <iostream>
+#include "AMateria.hpp"
 
-class Brain {
-    private:
-        std::string ideas[100];
+class Ice : public AMateria{
     public:
-        Brain();
-        Brain(Brain const &src);
-        ~Brain();
-        Brain &operator=(Brain const &src);
-        std::string getIdea(int i) const;
-        void setIdea(int i, std::string idea);
+        Ice( void );
+        Ice( Ice const &obj );
+        Ice &operator=( Ice const &obj );
+        ~Ice( void );
+        AMateria* clone( void ) const;
+        void use( ICharacter& target );
 };
