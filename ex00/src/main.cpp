@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 03:11:36 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/27 04:33:32 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/29 06:38:42 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,10 @@ int main (){
     std::cout << pet2->getType() << std::endl;
     pet1->makeSound();
     pet2->makeSound();
+    delete meta;
+    delete j;
+    delete i;
+    delete pet1;
+    delete pet2;
     return 0;
 }
