@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 03:10:48 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/23 03:23:14 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/30 02:52:18 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog( void ){
     this->Type = "Dog";
 }
 
-Dog::Dog( Dog const &obj ){
+Dog::Dog( Dog const &obj ) : Animal(obj) {
     std::cout << "Copy Constructor of <DOG> is called" << std::endl;
     *this = obj;
 }

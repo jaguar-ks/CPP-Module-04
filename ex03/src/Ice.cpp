@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 06:05:02 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/29 06:06:52 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/30 03:48:51 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Ice::Ice( void ) : AMateria("ice"){
 }
 
-Ice::Ice( Ice const &obj ){
+Ice::Ice( Ice const &obj ) : AMateria(obj) {
     *this = obj;
 }
 

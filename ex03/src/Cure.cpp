@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 06:07:09 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/29 06:07:57 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/30 03:48:39 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cure::Cure( void ) : AMateria("cure"){
 }
 
-Cure::Cure( Cure const &obj ){
+Cure::Cure( Cure const &obj ) : AMateria(obj) {
     *this = obj;
 }
 

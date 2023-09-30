@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 03:08:17 by faksouss          #+#    #+#             */
-/*   Updated: 2023/09/23 03:23:10 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/09/30 02:52:35 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat( void ){
     this->Type = "Cat";
 }
 
-Cat::Cat( Cat const &obj ){
+Cat::Cat( Cat const &obj ) : Animal(obj) {
     std::cout << "Copy Constructor of <CAT> is called" << std::endl;
     *this = obj;
 }
