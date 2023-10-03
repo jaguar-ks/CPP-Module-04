@@ -12,6 +12,7 @@
 1. [Interfaces in C++.](#interfaces-in-c)
     1. [Importance of Interfaces.](#importance-of-interfaces)
     1. [Rules While Using Interfaces](#rules-while-using-interfaces)
+1. [FinalMark & Author.](#finalmark--author)
 
 ---
 ## **Polymorphism in C++:**
@@ -110,3 +111,9 @@ Interfaces are nothing but a way to describe the behavior of a class without com
 ### ***Importance of Interfaces:***
 + Any class derived from the pure abstract class (Interface) must implement all of the methods of the base class i.e. Interface.
 + Interface pointers can be passed to functions and classes thereby we can call the functions of the derived class from there itself.
+
+## **FinalMark & Author:**
+
+![final-mark](./finalmark.png)
+
+**Author:**[jaguar-ks](https://github.com/jaguar-ks)
